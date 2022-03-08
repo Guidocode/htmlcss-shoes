@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .container{
   font-family: 'Rubik', sans-serif;
 }
@@ -16,8 +20,38 @@
 /* 
   HEADER 
 */
+ header{
+  position: fixed;
+  height: 70px;
+  width: 100%; 
+  z-index: 999;
+  text-align: right;
+}
 
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 40px 20px 0;
+  box-shadow: 0 0 5px black;
+}
 
+nav ul li:hover{
+  box-shadow: 0 0 10px black;
+}
+
+nav ul li a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  color: black;
+  background-color: white;
+} 
+
+nav ul li a:active{
+  background-color: darkgrey;
+}
 
 
 
