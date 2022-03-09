@@ -22,6 +22,7 @@ html{
 */
  header{
   position: fixed;
+  /* dovevo dare le coordinate enche se non cambia nulla però vanno date (in questo caso sono top: 0 e left: 0)  */
   height: 70px;
   width: 100%; 
   z-index: 999;
@@ -29,28 +30,56 @@ html{
 }
 
 nav ul li{
+  display: inline-block;
+}
+
+/* Vecchio codice  */
+/* nav ul li{
   list-style: none;
   display: inline-block;
   border-radius: 50%;
   overflow: hidden;
   margin: 40px 20px 0;
   box-shadow: 0 0 5px black;
-}
+} 
 
 nav ul li:hover{
   box-shadow: 0 0 10px black;
 }
 
-nav ul li a{
+/* nav ul li a{
   display: inline-block;
   text-decoration: none;
   padding: 15px 20px;
   color: black;
   background-color: white;
+}  */
+/* /Vecchio codice  */
+
+nav ul li a{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 50%;
+  margin: 20px 20px;
+  box-shadow: 0 0 5px black;
 } 
+
+nav ul li a:hover{
+  box-shadow: 0 0 10px black;
+}
 
 nav ul li a:active{
   background-color: darkgrey;
+  transform: translate(0, 5px);
+  /* posso dare un margin top per fare l'effetto che si schiaccia ma avrei dovuro dare float e non inline block */
+  /* in questo caso ci vuole treansform translate  */
+  
 }
 
 
@@ -59,7 +88,7 @@ nav ul li a:active{
   MAIN 
 */
 .box{
-  width: 100%;
+  width: 100%; /* La larghezza non serve */
   height: 100vh;
   position: relative;
 }
@@ -77,6 +106,7 @@ nav ul li a:active{
 
 .box .content-box h3{
   padding: 0 40px;
+  /* Avrei potuto dare ad h3 un font size 3vw così si ridimensiona quando rimpicciolisco la oagina  */
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
